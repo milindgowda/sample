@@ -2,11 +2,11 @@
 images = {
     nums:  ['','https://i.imgur.com/KYerTkL.png','https://i.imgur.com/Mvcv026.png','https://i.imgur.com/WAkmroj.png','https://i.imgur.com/jqedxPB.png','https://i.imgur.com/HpObaor.png'],
     mine: 'https://i.imgur.com/htKRVDL.png',
-    win: 'https://i.imgur.com/u4mW115.png',
     lost: 'https://i.imgur.com/o2VVsAH.png',
     smile: 'https://i.imgur.com/M7G4SV1.png',
     win: 'https://i.imgur.com/HOfmXZU.png',
-    flag: 'https://i.imgur.com/pnMCEOo.png'
+    flag: 'https://i.imgur.com/pnMCEOo.png',
+    surprise: 'https://i.imgur.com/654v4gJ.png'
 }
 
 
@@ -219,7 +219,10 @@ var View = ( function() {
             }
         },
         changeSmiley: (mood) => {
-            document.querySelector('.smiley').style.background = `url(${images.mood})`;
+            if(mood==='win') document.querySelector('.smiley').style.background = `url(${images.win})`;
+            if(mood==='lost') document.querySelector('.smiley').style.background = `url(${images.lost})`;
+            if(mood==='smile') document.querySelector('.smiley').style.background = `url(${images.smile})`;
+            if(mood==='surprise') document.querySelector('.smiley').style.background = `url(${images.surprise})`;
             document.querySelector('.smiley').style.backgroundSize = `cover`;
         }
     }
