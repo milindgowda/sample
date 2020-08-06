@@ -172,7 +172,7 @@ var View = ( function() {
             element.style.animation = `fadeOut 1s ease`;
             //element.style.animationFillMode = `forwards`;
             setTimeout(() => {
-                element.style.background = `url("../nums/mine.png")`;
+                element.style.background = `url("../../nums/mine.png")`;
                 element.style.backgroundSize =  `cover`;
             },500);
         },
@@ -181,7 +181,7 @@ var View = ( function() {
             element.style.animation = `fadeOut 1s ease`;
             //element.style.animationFillMode = `forwards`;
             setTimeout(() => {
-                element.style.background = `url("../nums/${val}.png")`;
+                element.style.background = `url("../../nums/${val}.png")`;
                 element.style.backgroundSize =  `cover`;
             },500);
         },
@@ -207,7 +207,7 @@ var View = ( function() {
             }
         },
         changeSmiley: (mood) => {
-            document.querySelector('.smiley').style.background = `url('../nums/${mood}.png')`;
+            document.querySelector('.smiley').style.background = `url('../../nums/${mood}.png')`;
             document.querySelector('.smiley').style.backgroundSize = `cover`;
         }
     }
@@ -311,7 +311,7 @@ var Control = ( (view,model)=> {
             const j = parseInt(id[1]);      
             if(!model.state.flagClick[i][j]&&model.state.canClick[i][j]){
                 console.log("test1");
-                document.getElementById(id).style.background = `url("../nums/flag.png")`;
+                document.getElementById(id).style.background = `url("../../nums/flag.png")`;
                 document.getElementById(id).style.backgroundSize =  `cover`;
                 model.state.flagClick[i][j] = true;
                 model.state.flags--;
