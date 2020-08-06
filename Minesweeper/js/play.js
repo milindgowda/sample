@@ -24,6 +24,9 @@ var Control = ( (view,model)=> {
             DOMstrings.medBtn.style.animation = 'goDown 1.5s ease';
             DOMstrings.hardBtn.style.animation = 'goDown 1.5s ease';
             DOMstrings.easyBtn.style.animation = 'goRight 1.5s ease';
+            DOMstrings.medBtn.style.animationFillMode = 'forwards';
+            DOMstrings.hardBtn.style.animationFillMode = 'forwards';
+            DOMstrings.easyBtn.style.animationFillMode = 'forwards';
             setTimeout(function(){
                 window.location = 'game.html#';
             }, 1450);
@@ -31,6 +34,8 @@ var Control = ( (view,model)=> {
         DOMstrings.medBtn.addEventListener('click', () => {
             DOMstrings.hardBtn.style.animation = 'goDown 1.5s ease';
             DOMstrings.easyBtn.style.animation = 'goDown 1.5s ease';
+            DOMstrings.hardBtn.style.animationFillMode = 'forwards';
+            DOMstrings.easyBtn.style.animationFillMode = 'forwards';
             setTimeout(function(){
                 window.location = 'game.html##';
             }, 1450);
@@ -39,6 +44,9 @@ var Control = ( (view,model)=> {
             DOMstrings.medBtn.style.animation = 'goDown 1.5s ease';
             DOMstrings.hardBtn.style.animation = 'goLeft 1.5s ease';
             DOMstrings.easyBtn.style.animation = 'goDown 1.5s ease';
+            DOMstrings.medBtn.style.animationFillMode = 'forwards';
+            DOMstrings.hardBtn.style.animationFillMode = 'forwards';
+            DOMstrings.easyBtn.style.animationFillMode = 'forwards';
             setTimeout(function(){
                 window.location = 'game.html###';
             }, 1450);
