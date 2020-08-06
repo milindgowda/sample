@@ -1,8 +1,20 @@
 //MVC 
+images = {
+    nums:  ['','https://i.imgur.com/KYerTkL.png','https://i.imgur.com/Mvcv026.png','https://i.imgur.com/WAkmroj.png','https://i.imgur.com/jqedxPB.png','https://i.imgur.com/HpObaor.png'],
+    mine: 'https://i.imgur.com/htKRVDL.png',
+    win: 'https://i.imgur.com/u4mW115.png',
+    lost: 'https://i.imgur.com/o2VVsAH.png',
+    smile: 'https://i.imgur.com/M7G4SV1.png',
+    win: 'https://i.imgur.com/HOfmXZU.png',
+    flag: 'https://i.imgur.com/pnMCEOo.png'
+}
+
+
 
 var Model = ( ()=> {
     let state = {
-        firstClick: false
+        firstClick: false,
+        
     };
 
     const isValid = (i,j) => {
@@ -172,7 +184,7 @@ var View = ( function() {
             element.style.animation = `fadeOut 1s ease`;
             //element.style.animationFillMode = `forwards`;
             setTimeout(() => {
-                element.style.background = `url("../../nums/mine.png")`;
+                element.style.background = `url(${images.mine})`;
                 element.style.backgroundSize =  `cover`;
             },500);
         },
@@ -181,7 +193,7 @@ var View = ( function() {
             element.style.animation = `fadeOut 1s ease`;
             //element.style.animationFillMode = `forwards`;
             setTimeout(() => {
-                element.style.background = `url("../../nums/${val}.png")`;
+                element.style.background = `url('${image.nums[val]}')`;
                 element.style.backgroundSize =  `cover`;
             },500);
         },
@@ -207,7 +219,7 @@ var View = ( function() {
             }
         },
         changeSmiley: (mood) => {
-            document.querySelector('.smiley').style.background = `url('../../nums/${mood}.png')`;
+            document.querySelector('.smiley').style.background = `url(${images.mood})`;
             document.querySelector('.smiley').style.backgroundSize = `cover`;
         }
     }
@@ -311,7 +323,7 @@ var Control = ( (view,model)=> {
             const j = parseInt(id[1]);      
             if(!model.state.flagClick[i][j]&&model.state.canClick[i][j]){
                 console.log("test1");
-                document.getElementById(id).style.background = `url("../../nums/flag.png")`;
+                document.getElementById(id).style.background = `url(${images.flag})`;
                 document.getElementById(id).style.backgroundSize =  `cover`;
                 model.state.flagClick[i][j] = true;
                 model.state.flags--;
