@@ -193,7 +193,7 @@ var View = ( function() {
             element.style.animation = `fadeOut 1s ease`;
             //element.style.animationFillMode = `forwards`;
             setTimeout(() => {
-                element.style.background = `url('${image.nums[val]}')`;
+                element.style.background = `url('${images.nums[val]}')`;
                 element.style.backgroundSize =  `cover`;
             },500);
         },
