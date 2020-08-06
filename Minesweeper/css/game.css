@@ -1,0 +1,86 @@
+
+.tblcol{
+    border: 1px solid #141414;
+    margin: 0;
+    padding: 0;
+    background-color:  #F2F3F4;
+    overflow: hidden;
+}
+
+.main-table{
+    animation: fadeIn 2s ease;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 10vmin;
+}
+
+.click-dissapear{
+    animation: fadeOut 1s ease;
+    animation-fill-mode: forwards;
+}
+
+.timer,.flag-count{
+    width: 50%;
+    height: 100%;
+    letter-spacing: 0.2em;
+    padding-top: 1% ;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    float: left;
+}
+
+.time-icon,img{
+    width: 3vmin;
+    height: 3vmin;
+    padding-right: 1vmin;
+}
+
+.time-change,.flag-change,.time-change-stop{
+    display: inline;
+}
+
+.smiley{
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    margin-left: 48.5vw;
+    background: url('../nums/smile.png');
+    background-size: cover;
+}
+
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fullFadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes overlayFadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.7;
+    }
+}
