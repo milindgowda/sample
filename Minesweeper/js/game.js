@@ -269,7 +269,6 @@ var Control = ( (view,model)=> {
         const cod = id.split(',');
         if(!model.state.canClick[cod[0],cod[1]]) return;
         let arr = model.openCells(cod[0],cod[1]);
-        console.log(arr);
         if(model.state.mineIDs.includes(arr[0])){
             //arr = model.state.mineIDs;
             view.revealAllMines(model.state.mineIDs);
@@ -280,7 +279,6 @@ var Control = ( (view,model)=> {
         }
         const temp = arr[0].split(',');
         if(model.state.grid[parseInt(temp[0])][parseInt(temp[1])]===0){
-            console.log('enter');
             view.changeSmiley('surprise');
             //setTimeout(view.changeSmiley('smile'),2000);
         }
@@ -312,7 +310,6 @@ var Control = ( (view,model)=> {
             if(model.state.canClick[i][j]){
                 if(!model.firstClick){
                     runTimer();
-                    console.log(model.state.grid);
                     model.firstClick=true;
                 }
                 decide(event.path[0].getAttribute('id'));
@@ -325,7 +322,6 @@ var Control = ( (view,model)=> {
             const i = parseInt(id[0]);
             const j = parseInt(id[1]);      
             if(!model.state.flagClick[i][j]&&model.state.canClick[i][j]){
-                console.log("test1");
                 document.getElementById(id).style.background = `url(${images.flag})`;
                 document.getElementById(id).style.backgroundSize =  `cover`;
                 model.state.flagClick[i][j] = true;
