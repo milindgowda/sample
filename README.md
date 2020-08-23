@@ -1,5 +1,7 @@
 Minesweeper
 
+LIVE DEMO: https://milindwd.github.io/Minesweeper/
+
 How to play: 
   1. You need to uncover every cell except the cells containing mines to win
   2. If you click on a cell containing mine you lose. Click on the smiley on top to restart.
