@@ -237,6 +237,7 @@ const runTimer = () => {
         Model.state.sec=0;
     }
     setTimeout(runTimer,1000);
+    console.log("add");
 }
 
 var Control = ( (view,model)=> {
